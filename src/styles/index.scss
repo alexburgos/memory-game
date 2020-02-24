@@ -101,7 +101,8 @@ header {
     height: 50px;
     width: 200px;
 
-    &:active {
+    &:active,
+    &:hover {
       transform: scale(0.97);
       transition: transform 0.2s linear;
     }

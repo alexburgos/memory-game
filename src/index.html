@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Schmemory Game</title>
+</head>
+<body>
+  <header>
+    <p>Time remaining: <span class="time-remaining"></span></p>
+    <p>Matches: <span class="count-text"></span></p>
+  </header>
+  <main>
+    <section class="Schmemory-grid">
+      <div class="Schmemory-card" data-location="bed">
+        <img class="front-face" src="assets/images/bed.jpeg" alt="Bed" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="bed">
+        <img class="front-face" src="assets/images/bed.jpeg" alt="Bed" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="brooklyn">
+        <img class="front-face" src="assets/images/brooklyn.jpeg" alt="Brooklyn" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="brooklyn">
+        <img class="front-face" src="assets/images/brooklyn.jpeg" alt="Brooklyn" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="barcelona">
+        <img class="front-face" src="assets/images/barcelona.jpeg" alt="Barcelona" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="barcelona">
+        <img class="front-face" src="assets/images/barcelona.jpeg" alt="Barcelona" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="helsinki">
+        <img class="front-face" src="assets/images/helsinki.jpeg" alt="Helsinki" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="helsinki">
+        <img class="front-face" src="assets/images/helsinki.jpeg" alt="Helsinki" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="stockholm">
+        <img class="front-face" src="assets/images/stockholm.jpeg" alt="Stockholm" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="stockholm">
+        <img class="front-face" src="assets/images/stockholm.jpeg" alt="Stockholm" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="vermont">
+        <img class="front-face" src="assets/images/vermont.jpeg" alt="Vermont" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+      <div class="Schmemory-card" data-location="vermont">
+        <img class="front-face" src="assets/images/vermont.jpeg" alt="Vermont" />
+        <img class="back-face" src="assets/images/dog.svg" alt="Where is the dog?" />
+      </div>
+    </section>
+    <section class="Schmemory-overlay intro">
+      <h1>The Schmemory Game</h1>
+      <p>This is a card game where pairs of cards
+        contain images (of my dog), such that for each card, there is exactly one other card with the same image. Click on the cards to start the game!
+      </p>
+      <button class="start-btn">PLAY!</button>
+    </section>
+
+    <section class="Schmemory-overlay victory hidden">
+      <h1>You found all the matches!</h1>
+      <p>Refresh to start again.</p>
+    </section>
+
+    <section class="Schmemory-overlay game-over hidden">
+      <h1>:( Sorry, time's up!</h1>
+      <p>Refresh to start again.</p>
+    </section>
+  </main>
+</body>
+</html>

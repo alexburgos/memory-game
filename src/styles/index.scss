@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  color: #ddd;
+  display: flex;
+  font-family: 'Roboto Mono';
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  margin: 10px auto 30px;
+}
+
+.Schmemory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  justify-content: center;
+  perspective: 1000px;
+  margin: auto;
+  justify-content: center;
+}
+
+.Schmemory-card {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.4s;
+  height: 200px;
+  width: 150px;
+
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #ddd;
+    backface-visibility: hidden;
+  }
+
+  .back-face {
+    padding: 20px;
+  }
+
+  .front-face {
+    transform: rotateY(180deg);
+    padding: 10px;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &.flip {
+    transform: rotateY(180deg);
+  }
+  
+}
+
+.Schmemory-overlay {
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+
+  h1 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  button {
+    background-color: #333;
+    border: 1px solid #333;
+    color: #ddd;
+    cursor: pointer;
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    margin-top: 50px;
+    height: 50px;
+    width: 200px;
+
+    &:active {
+      transform: scale(0.97);
+      transition: transform 0.2s linear;
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+// Mobile styles
+@media screen and (max-width: 600px) {
+  header {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .Schmemory-grid {
+    grid-template-columns: repeat(2, auto);
+  }
+}
